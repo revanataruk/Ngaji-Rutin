@@ -122,5 +122,3 @@ For questions, suggestions, or collaboration opportunities:
 ## 📄 License
 
 This project is developed as a custom internal documentation solution with open development practices.
-
----
