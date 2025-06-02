@@ -1,65 +1,136 @@
 # 📸 Ngaji Rutin — Document Moments, Store Stories
-**Ngaji Rutin** is a custom website developed to automatically and efficiently document friendship moments. Built from scratch without CMS, this website focuses on time-based photo galleries directly integrated with **Google Drive** through **Google Apps Script**, enabling photo upload and display without requiring conventional backend.
+
+**Custom Serverless Photo Gallery with Google Drive Integration**
+
+Ngaji Rutin is a custom-built website designed to automatically and efficiently document friendship moments. Built entirely from scratch without CMS, this website features a time-based photo gallery directly integrated with **Google Drive** through **Google Apps Script**, enabling seamless photo uploads and displays without requiring conventional backend infrastructure.
 
 ---
 
-## 🛠️ Behind the Scenes: How the Website Works
-This website is built with a lightweight yet functional stack:
+## 🌟 Features
 
-### 🧩 Frontend:
-- **HTML + Tailwind CSS**: Clean structure and responsive design
-- **Vanilla JavaScript**: For dynamic interactions (modal, validation, scroll)
-- **Custom Upload UI**: Photo upload form + date input & password
-
-### ☁️ Backend & Storage:
-- **Google Apps Script**: Handles direct upload process to Google Drive, automatic file renaming, and data validation
-- **Google Drive API**: Used as cloud storage and photo source for gallery
-- **Spreadsheet Logging** *(optional)*: To record metadata of uploaded files (if monitoring is needed)
-
----
-
-## 🔍 Main Features
-- ✅ **Automatic Upload to Google Drive**  
-  Files uploaded through the form go directly to the designated Drive folder without users seeing the Drive interface.
-
-- ✅ **File Name Validation**  
-  Users must rename files according to `dd-mm-yyyy` format. Upload is blocked if format is incorrect.
-
-- ✅ **Minimum 3 People in Photo**  
-  This is an internal rule. Upload is valid only if photo contains at least 3 members—displayed as a warning in UI.
-
-- ✅ **Dynamic Gallery**  
-  Gallery displays **25 latest photos**, grouped by upload date. Old photos remain stored in Drive.
-
-- ✅ **Inspect Photo Modal**  
-  Click photos to view large-size preview, complete with elegant close button.
-
-- ✅ **Smooth UX**  
-  - Scroll-to-top button  
-  - Hover effects on gallery  
-  - Gallery limited to `max-height` to keep focus on stories below
+- ✅ **Automatic Google Drive Upload**  
+  Files uploaded through the form go directly to designated Drive folder without users accessing Drive interface
+- ✅ **Smart File Name Validation**  
+  Enforces `dd-mm-yyyy` format for uploaded files with automatic validation blocking
+- ✅ **Group Photo Validation**  
+  Internal rule requiring minimum 3 people in photos with UI warning system
+- ✅ **Dynamic Gallery Display**  
+  Shows 25 latest photos grouped by upload date while maintaining all photos in Drive storage
+- ✅ **Elegant Photo Modal**  
+  Click-to-view large-size photo preview with smooth interactions
+- ✅ **Smooth User Experience**  
+  Scroll-to-top functionality, hover effects, and optimized gallery height management
 
 ---
 
-## 📆 Project Timeline
-- 💡 Initial idea emerged: **August 27, 2024**
-- 📐 UI/UX research and design: September–October 2024
-- 💤 Temporarily discontinued for several months
-- 🚀 Launch and go live: **April 10, 2025**
+## 🛠️ Tech Stack
+
+### Frontend:
+- **HTML + Tailwind CSS**: Clean structure with responsive utility-first design
+- **Vanilla JavaScript**: Dynamic interactions, modal management, and form validation
+- **Custom Upload UI**: Intuitive photo upload form with date input and password protection
+
+### Backend & Storage:
+- **Google Apps Script**: Serverless backend handling direct uploads, file renaming, and data validation
+- **Google Drive API**: Cloud storage solution and photo source for dynamic gallery
+- **Google Spreadsheet**: Optional metadata logging for uploaded file monitoring
+
+### Architecture:
+- **Serverless Design**: Runs entirely on Google ecosystem without traditional server infrastructure
+- **Cost-Effective**: No database or hosting costs, leveraging Google's free tier services
+
+---
+
+## 📁 Project Structure
+
+```
+├── index.html          # Main gallery and upload interface
+├── styles/
+│   └── tailwind.css    # Tailwind CSS framework
+├── scripts/
+│   ├── upload.js       # File upload and validation logic
+│   ├── gallery.js      # Dynamic gallery rendering
+│   └── modal.js        # Photo preview modal system
+├── google-apps-script/
+│   └── Code.gs         # Google Apps Script backend logic
+├── assets/
+│   └── images/         # Static images and icons
+└── README.md
+```
+
+---
+
+## 🔧 How It Works
+
+### Upload Process:
+1. **File Selection**: User selects photo with date and password
+2. **Validation**: JavaScript validates file format and naming convention
+3. **Google Apps Script**: Handles secure upload to designated Drive folder
+4. **Automatic Renaming**: Files renamed according to date format rules
+5. **Gallery Update**: New photos appear in gallery within refresh cycle
+
+### Gallery System:
+- **Dynamic Loading**: Fetches latest 25 photos from Google Drive
+- **Date Grouping**: Photos organized by upload date for better navigation
+- **Modal Preview**: Full-size photo viewing with elegant overlay
+- **Responsive Design**: Optimized for various screen sizes
+
+---
+
+## 📅 Project Timeline
+
+- 💡 **Initial Concept**: August 27, 2024
+- 📐 **UI/UX Research & Design**: September–October 2024
+- 💤 **Development Hiatus**: Several months of project pause
+- 🚀 **Launch & Go Live**: April 10, 2025
+
+---
+
+## 🎯 Project Objectives
+
+This project was developed to explore:
+- **Serverless Architecture** implementation via Google Apps Script
+- Seamless integration between custom frontend and Google Drive ecosystem
+- Cost-effective, scalable photo gallery solution without traditional backend
+- Simple file structure that's easy to maintain and expand
+
+> *This application runs entirely on Google ecosystem—making it lightweight, cost-effective, and highly flexible for future enhancements.*
+
+---
+
+## 🚀 Development Status
+
+- ✅ **Core Functionality**: Fully implemented and tested
+- ✅ **Google Integration**: Complete Drive API and Apps Script integration
+- ✅ **UI/UX**: Responsive design with smooth interactions
+- 🔄 **Optimization**: Ongoing performance improvements and feature additions
 
 ---
 
 ## 👨‍💻 Developer Notes
-This project was developed as internal documentation, but built with standards like public web applications. The objectives are:
-- Implementing **serverless architecture** via Google Apps Script
-- Exploring seamless integration between custom frontend and Google Drive
-- Maintaining simple file structure that's easy to maintain and expand
 
-> This web doesn't depend on external databases, but runs entirely on Google ecosystem—making it lightweight, cost-effective, and flexible.
+This project serves as internal documentation but is built with public web application standards. Key technical achievements:
+
+- **Zero Server Costs**: Entirely serverless architecture
+- **Automatic Scaling**: Google's infrastructure handles traffic spikes
+- **Simple Maintenance**: Minimal codebase with clear separation of concerns
+- **Flexible Storage**: Unlimited photo storage through Google Drive
 
 ---
 
-## 📌 Final Notes
-Ngaji Rutin is a project born from real needs: storing moments efficiently and enjoyably. Built with heart by one developer, for one gang that will never be replaced.
+## 📬 Contact & Contributions
 
-> *"Because it's not just the photos that are saved, but all the stories behind them."*
+For questions, suggestions, or collaboration opportunities:
+
+- **Email**: [diwangkararevan@gmail.com](mailto:diwangkararevan@gmail.com)
+- **GitHub**: [@revanataruk](https://github.com/revanataruk)
+
+---
+
+## 📄 License
+
+This project is developed as a custom internal documentation solution with open development practices.
+
+---
+
+*Built with ❤️ for preserving precious moments and friendships*
