@@ -44,17 +44,9 @@ Ngaji Rutin is a custom-built website designed to automatically and efficiently 
 ## 📁 Project Structure
 
 ```
-├── index.html          # Main gallery and upload interface
-├── styles/
-│   └── tailwind.css    # Tailwind CSS framework
-├── scripts/
-│   ├── upload.js       # File upload and validation logic
-│   ├── gallery.js      # Dynamic gallery rendering
-│   └── modal.js        # Photo preview modal system
-├── google-apps-script/
-│   └── Code.gs         # Google Apps Script backend logic
-├── assets/
-│   └── images/         # Static images and icons
+├── index.html          
+├── NR 1.css
+├── NR 1.js
 └── README.md
 ```
 
