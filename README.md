@@ -124,5 +124,3 @@ For questions, suggestions, or collaboration opportunities:
 This project is developed as a custom internal documentation solution with open development practices.
 
 ---
-
-*Built with ❤️ for preserving precious moments and friendships*
