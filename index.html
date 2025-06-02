@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ngaji Rutin</title>
+    <link rel="stylesheet" href="NR 1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;900&family=Rubik:wght@400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>NGAJI RUTIN</h1>
+        <p>DOKUMENTAZY</p>
+    </header>
+
+    <main>
+        <section class="upload-section">
+            <button id="uploadButton">Upload Photo</button>
+            <div id="uploadModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Upload Photo</h2>
+                    <form id="uploadForm">
+                        <input type="file" id="fileInput" accept="image/*" required>
+                        <div class="rename-section">
+                            <label for="renameInput">⚠️ Peringatan: Minimal foto wong 3 di dalamnya.<br> ⚠️ Input tanggal ciak ! (dd-mm-yyyy):</label>
+                            <input type="text" id="renameInput" placeholder="dd-mm-yyyy" required>
+                        </div>
+                        <input type="password" id="passwordInput" placeholder="input password" required>
+                        <button type="submit">Post</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery">
+            <h2>Bro</h2>
+            <div id="photoContainer"></div>
+        </section>
+
+        <section class="history">
+            <h2>Kenapa Bisa Ada Ngaji Rutin</h2>
+            <p class="mb-4">
+                "Ngaji Rutin" bukan dimulai dari kajian atau kegiatan keagamaan seperti yang mungkin orang bayangkan. Awalnya, ini hanyalah sekumpulan teman yang satu frekuensi ngobrol ngetan-ngulon, main kartu French suited dan Uno, dan menikmati waktu bareng setelah les.
+              </p>
+            
+              <p class="mb-4">
+                Semua berawal dari tongkrongan anak-anak kelas IPS 1 SMA Negeri 1 Kertosono yang les di Dasapratama, jurusan Soshum. Kebiasaan kumpul setelah les sore jadi rutinitas yang ditunggu-tunggu. Tapi makin lama, koordinasi untuk kumpul mulai ribet karena harus hubungi satu per satu. Dari situlah muncul ide untuk bikin grup WhatsApp sebagai wadah komunikasi.
+              </p>
+            
+              <p class="mb-4">
+                Grup itu resmi dibuat pada 14 Januari 2022. Sejak saat itu, lingkup pertemanan pun meluas. Nggak cuma anak-anak IPS 1 yang les bareng, tapi juga teman-teman dari kelas IPA 2 yang meskipun nggak ikut les di Dasapratama, tetap nyambung dan klik secara obrolan maupun energi.
+              </p>
+            
+              <p class="mb-4">
+                "Ngaji Rutin" lahir dari kebiasaan sederhana: kumpul, cerita, ketawa, dan saling dukung. Sekarang, grup ini jadi lebih dari sekadar tongkrongan jadi ruang nyaman untuk berbagi, nostalgia, dan merawat koneksi yang udah terbangun sejak masa-masa sekolah.
+              </p>
+              <h2 class="text-2xl font-semibold mb-4 text-center">Kenapa Website Ini Dibuat</h2>
+              
+                <p class="mb-4">
+                  Setiap kali ada momen seru atau kumpul bareng, kita hampir selalu ambil foto—entah iseng, candid, atau pose serius. Tapi lama-kelamaan muncul satu pertanyaan: gimana caranya biar semua momen itu nggak cuma numpuk di galeri HP masing-masing?
+                </p>
+              
+                <p class="mb-4">
+                  Dari situ, pada <strong>27 Agustus 2024</strong>, muncul ide buat bikin website sederhana yang bisa jadi tempat khusus untuk mengabadikan momen. Konsepnya: gratisan, bisa upload foto, dan punya tampilan galeri yang rapi. Akhirnya, mulai dibuatlah rancangan dan sistem kerja untuk web <em>Ngaji Rutin</em> ini.
+                </p>
+              
+                <p class="mb-4">
+                  Sayangnya, setelah konsepnya jadi, progress pengembangannya sempat berhenti cukup lama. Tapi nggak dibiarkan mangkrak selamanya sampai akhirnya, pada <strong>10 April 2025</strong>, website ini resmi selesai dan mulai beroperasi.
+                </p>
+              
+                <p class="mb-4">
+                  Sekarang, upload foto nggak perlu nunggu semua anggota hadir. Cukup minimal tiga orang yang kumpul, foto bisa langsung diunggah ke web. Dengan begitu, semua anggota bisa tetap tahu kabar dan momen teman-teman yang lagi ngumpul, walau lagi nggak ikut hadir langsung.
+                </p>     
+                
+                <p class="mt-6 text-center text-sm text-gray-600">
+                    Untuk melihat versi lengkap dari semua foto yang sudah diunggah, kamu bisa buka melalui link berikut:
+                  </p>
+                
+                  <p class="text-center mt-2">
+                    <a href="https://drive.google.com/drive/folders/1h-UlOX02EPajZYtOICeZg5Gi1MxPyh0L?dmr=1&ec=wgc-drive-hero-goto" 
+                       target="_blank" 
+                       class="text-blue-600 underline hover:text-blue-800 transition">
+                      Lihat Galeri Lengkap di Google Drive
+                    </a>
+                  </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Ngaji Rutin.<a href="#" class="footer-author">Created in partnership with repanohara</a>.</p>
+    </footer>
+    
+    
+    <!-- Modal untuk inspect foto -->
+    <div id="inspectModal" class="modal">
+        <div class="modal-content">
+            <span class="close-inspect">&times;</span>
+            <img id="inspectImage" src="" alt="Foto Detail">
+            <p id="inspectDate"></p>
+        </div>
+    </div>
+
+    <button id="scrollTopButton" title="Kembali ke Atas">&#9650;</button>
+
+    <script src="NR 1.js"></script>
+</body>
+</html>
